@@ -10,4 +10,5 @@ public class ScontrolPacApplication {
 		SpringApplication.run(ScontrolPacApplication.class, args);
 	}
 
+
 }

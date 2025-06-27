@@ -2,6 +2,8 @@ package com.amm.scontrolpac.entities;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -17,6 +19,9 @@ public class Cliente {
     private String contato;
     private String info;
     private String ativo;
+
+    @OneToMany
+    private List<Contato> contatoCli = new ArrayList<>();
 
     public Cliente(){}
 
@@ -85,6 +90,10 @@ public class Cliente {
 
     public void setAtivo(String ativo) {
         this.ativo = ativo;
+    }
+
+    public List<Contato> getContatoCli() {
+        return contatoCli;
     }
 
     @Override
